@@ -1,6 +1,6 @@
-import { Employees } from "./Employees.js"
-import { Orders } from "./Order.js"
-import { Products } from "./Products.js"
+import { employees } from "./Employees.js"
+import { orders } from "./Orders.js"
+import { products } from "./Products.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -9,17 +9,17 @@ const applicationHTML = `
 <article class="details">
     <section class="detail--column list details__employees">
         <h2>Employees</h2>
-        ${Employees()}
+        ${employees()}
     </section>
     <section class="detail--column list details__products">
         <h2>Products</h2>
-        ${Products()}
+        ${products()}
     </section>
 </article>
 
 <article class="orders">
     <h2>Orders</h2>
-    ${Orders()}
+    ${orders()}
 </article>
 `
 

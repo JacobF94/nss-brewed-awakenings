@@ -3,7 +3,7 @@ import { getProducts, getEmployees, getOrders } from "./database.js"
 // Get copy of state for use in this module
 const products = getProducts()
 const employees = getEmployees()
-const orders = getOrders()
+const newOrders = getOrders()
 
 
 // Function whose responsibility is to find the product for an order
@@ -32,11 +32,11 @@ const findemployee = (order, allEmployees) => {
     return orderEmployee
 }
 
-export const Orders = () => {
+export const orders = () => {
     let html = ""
     html = "<ul>"
 
-    for (const order of orders) {
+    for (const order of newOrders) {
         const employee = findEmployee(order, employees)
         const product = findProduct(order)
 

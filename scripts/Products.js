@@ -1,11 +1,11 @@
 import { getProducts } from "./database.js"
 
-const products = getProducts()
+const listProducts = getProducts()
 
-export const Products = () => {
-    let html = "<ul>`
+export const products = () => {
+    let html = "<ul>"
 
-    for (const product of products) {
+    for (const product of listProducts) {
         html += `<li id="product--${product.id}">${product.title}</li>`
     }
 
