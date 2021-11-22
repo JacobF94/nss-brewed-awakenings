@@ -1,16 +1,16 @@
 import { getEmployees } from "./database.js"
 
-const employees = getEmployees()
+const listEmployees = getEmployees()
 
-export const Employees = () => {
+export const employees = () => {
     let html = "<ul>"
 
-    for (const employee of employees) {
-        html += `<li id="employee--${employeeId}">${employee.name}</li>`
+    for (const employee of listEmployees) {
+        html += `<li id="employee--${employee.Id}">${employee.name}</li>`
     }
 
     html += "</ul>"
 
-    return htm
+    return html
 }
 
