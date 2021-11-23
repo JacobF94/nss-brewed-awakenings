@@ -6,7 +6,7 @@ export const products = () => {
     let html = "<ul>"
 
     for (const product of listProducts) {
-        html += `<li id="product--${product.id}">${product.title}</li>`
+        html += `<li id="product--${product.id}">${product.name}</li>`
     }
 
     html += "</ul>"
